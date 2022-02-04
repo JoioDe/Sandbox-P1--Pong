@@ -1,4 +1,4 @@
-# Sandbox Pong
+# Procedural Pong Notes
 CS30
 
-Brainstorming Easter Eggs
+
