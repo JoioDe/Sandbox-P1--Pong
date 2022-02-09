@@ -10,7 +10,7 @@ void population() {
   x2RightNet = x1RightNet = width*39/40;
   yLeftScore = yRightScore = y1MiddleLine = y1RightNet = y1LeftNet = height*0;
   y2MiddleLine = y2RightNet = y2LeftNet = height;
-  yLeftPaddle = yRightPaddle = height*1/2; //Too Low
+  yRightPaddle = height*1/2; //Too Low
   widthPaddle = width*1/100;
   heightPaddle = height*1/5;
   xRightPaddle = width*39/40;
@@ -18,4 +18,6 @@ void population() {
   xRightScore = width*3/4;
   widthScore = width*1/10;
   heightScore = height*1/10;
+  //
+  yLeftPaddle = (height*1/2) - (heightPaddle*1/2);
 }//End population
