@@ -1,29 +1,35 @@
 //Global Variables
 float xBall, yBall, ballDiameter;
-float x1LeftNet, y1Net, x2LeftNet, y2Net;
+float x1LeftNet, y1LeftNet, x2LeftNet, y2LeftNet;
+float x1RightNet, y1RightNet, x2RightNet, y2RightNet;
+float x1MiddleLine, y1MiddleLine, x2MiddleLine, y2MiddleLine;
 float xLeftPaddle, yLeftPaddle, widthPaddle, heightPaddle, xRightPaddle, yRightPaddle;
+float xLeftScore, yLeftScore, xRightScore, yRightScore, widthScore, heightScore;
 
 void setup() {
   //Geomtery Communication and Variables for GUI Ratios
   size(700, 500); //Landscape-orientation, fullScreen(); //displayWidth, displayHeight
   population();
-  xLeftPaddle = x1LeftNet;
-  yLeftPaddle = height*1/2; //Too Low
-  widthPaddle = width*1/100;
-  heightPaddle = height*1/5;
-  xRightPaddle = width*39/40;
-  yRightPaddle = yLeftPaddle;
+
+  xLeftScore = width*1/4;
+  xRightScore = width*3/4;
+  yLeftScore = yRightScore = height*0;
+  widthScore = width*1/10;
+  heightScore = height*1/10;
+  
+  
 }//End setup
 
 void draw() {
+  //Objects
   ellipse(xBall, yBall, ballDiameter, ballDiameter);
   rect(xLeftPaddle, yLeftPaddle, widthPaddle, heightPaddle);
-  rect(xRightPaddle, yRightPaddle, widthPaddle, heightPaddle); //right paddle
-  line(x1LeftNet, y1Net, x2LeftNet, y2Net);
-  //line(); //right net
-  //line(); //middle line
-  //rect(); //score left
-  //rect(); //score right
+  rect(xRightPaddle, yRightPaddle, widthPaddle, heightPaddle);
+  line(x1LeftNet, y1LeftNet, x2LeftNet, y2LeftNet);
+  line(x1RightNet, y1RightNet, x2RightNet, y2RightNet);
+  line(x1MiddleLine, y1MiddleLine, x2MiddleLine, y2MiddleLine); //Needs to be dotted
+  rect(xLeftScore, yLeftScore, widthScore, heightScore); //score left
+  rect(xRightScore, yRightScore, widthScore, heightScore); //score right
 }//End draw
 
 void keyPressed() {
