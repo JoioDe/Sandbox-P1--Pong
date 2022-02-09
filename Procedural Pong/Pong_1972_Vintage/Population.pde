@@ -1,3 +1,6 @@
+/*Best Practice: same variables are populated on the same line
+ Variables should be organized to ease human reading
+ */
 void population() {
   xBall = width*1/2;
   yBall = height*1/2;
@@ -15,5 +18,4 @@ void population() {
   xRightScore = width*3/4;
   widthScore = width*1/10;
   heightScore = height*1/10;
-
 }//End population
