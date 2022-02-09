@@ -10,14 +10,7 @@ void setup() {
   //Geomtery Communication and Variables for GUI Ratios
   size(700, 500); //Landscape-orientation, fullScreen(); //displayWidth, displayHeight
   population();
-
-  xLeftScore = width*1/4;
-  xRightScore = width*3/4;
-  yLeftScore = yRightScore = height*0;
-  widthScore = width*1/10;
-  heightScore = height*1/10;
-  
-  
+  // 
 }//End setup
 
 void draw() {
