@@ -1,3 +1,7 @@
+/*To Do List
+Symmetry of Scoreboards and Right Paddle
+*/
+
 //Global Variables
 //Best Practice: initialization on similar lines
 float xBall, yBall, ballDiameter;
