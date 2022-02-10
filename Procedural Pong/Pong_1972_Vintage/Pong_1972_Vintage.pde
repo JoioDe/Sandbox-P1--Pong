@@ -20,7 +20,7 @@ void setup() {
 
 void draw() {
   //Objects use variables to ID purpose of function
-  ellipse(xBall, yBall, ballDiameter, ballDiameter);
+  ball();
   leftPaddle(); //Another Purpose of developer-written functions
   rightPaddle();
   line(x1LeftNet, y1LeftNet, x2LeftNet, y2LeftNet);

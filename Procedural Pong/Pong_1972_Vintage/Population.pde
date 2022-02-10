@@ -17,7 +17,7 @@ void population() {
   //
   yLeftPaddle = (height*1/2) - (heightPaddle*1/2);
   yRightPaddle = (height*1/2)  - (heightPaddle*1/2);
-  xRightPaddle = (width*39/40) - (widthPaddle*1/2);
+  xRightPaddle = (width*39/40) - (widthPaddle);
   //
   xLeftScore = (width*1/4) - (widthScore*1/2);
   xRightScore = (width*3/4) - (widthScore*1/2);
