@@ -31,8 +31,7 @@ void draw() {
 }//End draw
 
 void keyPressed() { //Listener
-  //Right Paddle: ARROW Keys
-  
+  rightPaddleKeyPressed();
 }//End keyPressed
 
 void mousePressed() {
