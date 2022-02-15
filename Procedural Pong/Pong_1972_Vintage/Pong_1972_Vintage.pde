@@ -21,7 +21,7 @@ void setup() {
 void draw() {
   //Objects use variables to ID purpose of function
   ball();
-  leftPaddle(); //Another Purpose of developer-written functions
+  leftPaddleDraw(); //Another Purpose of developer-written functions
   rightPaddleDraw();
   line(x1LeftNet, y1LeftNet, x2LeftNet, y2LeftNet);
   line(x1RightNet, y1RightNet, x2RightNet, y2RightNet);
@@ -32,6 +32,7 @@ void draw() {
 
 void keyPressed() { //Listener
   rightPaddleKeyPressed();
+  leftPaddleKeyPressed();
 }//End keyPressed
 
 void mousePressed() {

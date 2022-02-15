@@ -3,6 +3,10 @@ int rightPaddleSpeed = 1;
 
 void rightPaddleDraw() {
   rightPaddleStart();
+  //
+  if ( yRightPaddle < height*0) yRightPaddle = height*0;
+  if ( yRightPaddle+heightPaddle > height) yRightPaddle = height;
+  //
 }//End rightPaddle
 
 void rightPaddleKeyPressed() {
