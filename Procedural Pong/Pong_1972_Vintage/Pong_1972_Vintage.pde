@@ -22,7 +22,7 @@ void draw() {
   //Objects use variables to ID purpose of function
   ball();
   leftPaddle(); //Another Purpose of developer-written functions
-  rightPaddle();
+  rightPaddleDraw();
   line(x1LeftNet, y1LeftNet, x2LeftNet, y2LeftNet);
   line(x1RightNet, y1RightNet, x2RightNet, y2RightNet);
   line(x1MiddleLine, y1MiddleLine, x2MiddleLine, y2MiddleLine); //Needs to be dotted
@@ -30,7 +30,9 @@ void draw() {
   rect(xRightScore, yRightScore, widthScore, heightScore);
 }//End draw
 
-void keyPressed() {
+void keyPressed() { //Listener
+  //Right Paddle: ARROW Keys
+  
 }//End keyPressed
 
 void mousePressed() {

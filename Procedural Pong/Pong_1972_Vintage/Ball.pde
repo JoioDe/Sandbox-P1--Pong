@@ -13,7 +13,6 @@ void ballMove() {
   } else if (xBall <= x1LeftNet+(ballDiameter*1/2)) {
     xBall = (width*0)+(ballDiameter*1/2);
   } else {
-
     xBall += xMove;
     yBall += yMove;
   }
