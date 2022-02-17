@@ -17,6 +17,6 @@ color resetColor=#000000;
 fill(purpleInk); //Ink
 textAlign(CENTER, CENTER); //Align X&Y, see Processing.org / Reference
 //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
-textFont(titleFont, 55); //Change the number until it fits, largest font size
-text();
+textFont(titleFont, 50); //Change the number until it fits, largest font size
+text(title, titleX, titleY, titleWidth, titleHeight);
 fill(resetColor); //Ink to default
