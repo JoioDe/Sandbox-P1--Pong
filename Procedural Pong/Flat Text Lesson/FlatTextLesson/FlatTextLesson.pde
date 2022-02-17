@@ -12,9 +12,11 @@ rect(titleX, titleY, titleWidth, titleHeight);
 String title = "Wahoo!";
 color purpleInk=#88007D; //Daytime only, not for night mode
 color nightModeGreenInk=#04B200; 
+color resetColor=#000000;
 //
 fill(purpleInk); //Ink
-textAlign();
-textFont(); //Change the number until it fits, largest font size
+textAlign(CENTER, CENTER); //Align X&Y, see Processing.org / Reference
+//Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
+textFont(titleFont, 55); //Change the number until it fits, largest font size
 text();
-fill(); //Ink to default
+fill(resetColor); //Ink to default
