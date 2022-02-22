@@ -25,8 +25,14 @@ void setup() {
 }//End setup()
 //
 void draw() {
-
   rect(titleX, titleY, titleWidth, titleHeight);
+  //Every time we draw text, these lines must be used
+  fill(purpleInk); //Ink
+  textAlign(CENTER, CENTER); //Align X&Y, see Processing.org / Reference
+  //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
+  textFont(titleFont, 50); //Change the number until it fits, largest font size
+  text(title, titleX, titleY, titleWidth, titleHeight);
+  fill(resetColor); //Ink to default
 }//End draw()
 //
 void keyPressed() {
