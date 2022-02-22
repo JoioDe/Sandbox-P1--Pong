@@ -1,3 +1,3 @@
-Boilerplate is done
 
-Population
+Next is Text Calculator in Dynamic Text
+

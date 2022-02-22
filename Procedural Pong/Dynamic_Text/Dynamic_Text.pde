@@ -6,7 +6,8 @@ void setup() {
 }//End setup()
 //
 void draw() {
-  textDraw();
+  textDraw(); //Left Score
+  textDraw(); //Rigth Score
 }//End draw()
 //
 void keyPressed() {
