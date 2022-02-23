@@ -3,9 +3,9 @@
 //
 //Global Variables
 PFont titleFont;
-int titleX, titleY, titleWidth, titleHeight;
+int titleX, titleY, titleWidth, titleHeight, secondX, secondY, secondWidth, secondHeight;
 //These variables are Global to deal with draw() system resources (i.e initialize & garbage collect)
-String title = "Wahoo!";
+String title="Wahoo!", secondTitle="Hello World";
 color purpleInk=#88007D; //Daytime only, not for night mode
 color nightModeGreenInk=#04B200; 
 color resetColor=#000000;
@@ -24,6 +24,10 @@ void textSetup()
   titleY = height*1/10;
   titleWidth = width*3/5;
   titleHeight = height*1/10;
+  secondX = width*1/5;
+  secondY = height*3/10;
+  secondWidth = width*3/5;
+  secondHeight = height*1/10;
   textLayout();
   //
 }//End textSetup()
@@ -31,6 +35,7 @@ void textSetup()
 void textLayout()
 {
   rect(titleX, titleY, titleWidth, titleHeight);
+  rect(secondX, secondY, secondWidth, secondHeight);
 }//End textLayout
 //
 void preDrawText(float height, color ink, int alignHorizontal, int alignVertical, PFont font)
@@ -43,11 +48,12 @@ void preDrawText(float height, color ink, int alignHorizontal, int alignVertical
 void textDraw(float height, color ink, int alignHorizontal, int alignVertical, PFont font, String string, float xRect, float yRect, float widthRect, float heightRect, color resetColor)
 {
   preDrawText(height, ink, alignHorizontal, alignVertical, font);
+  textSize(height); //height is wrong //Comparison of two Nums: textWidth(STRING) vs rectWidth, startingFontSize=height
   text(string, xRect, yRect, widthRect, heightRect);
-  textReset();
+  textReset(resetColor);
 }//End textDraw()
 //
-void textReset()
+void textReset(color resetColor)
 {
-  fill(); //Ink to default
+  fill(resetColor); //Ink to default //Now is local variable, not Global with same name
 }//End textReset
