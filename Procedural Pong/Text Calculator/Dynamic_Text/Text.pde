@@ -33,17 +33,17 @@ void textLayout()
   rect(titleX, titleY, titleWidth, titleHeight);
 }//End textLayout
 //
-void preDrawText(float height, color ink, int alignHorizontal, int alignVertical)
+void preDrawText(float height, color ink, int alignHorizontal, int alignVertical, PFont font)
 {
   fill(ink);
   textAlign(alignHorizontal, alignVertical); //Align X&Y, see Processing.org / Reference
   //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
-  textFont(titleFont, height); //50 //Change the number until it fits, largest font size
+  textFont(font, height); //50 //Change the number until it fits, largest font size
 }//End preDrawText
-void textDraw(float height, color ink, int alignHorizontal, int alignVertical)
+void textDraw(float height, color ink, int alignHorizontal, int alignVertical, PFont font, String string, float xRect, float yRect, float widthRect, float heightRect)
 {
-  preDrawText(height, ink, alignHorizontal, alignVertical);
-  text(title, titleX, titleY, titleWidth, titleHeight);
+  preDrawText(height, ink, alignHorizontal, alignVertical, font);
+  text(string, xRect, yRect, widthRect, heightRect);
   textReset();
 }//End textDraw()
 //

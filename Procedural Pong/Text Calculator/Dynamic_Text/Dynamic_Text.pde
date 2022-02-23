@@ -6,7 +6,7 @@ void setup() {
 }//End setup()
 //
 void draw() {
-  textDraw(height, purpleInk, CENTER, CENTER); //Left Score
+  textDraw(height, purpleInk, CENTER, CENTER, titleFont, title, titleX, titleY, titleWidth, titleHeight); //Left Score
   textDraw(); //Rigth Score
 }//End draw()
 //
