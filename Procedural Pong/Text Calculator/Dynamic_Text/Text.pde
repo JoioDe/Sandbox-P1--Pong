@@ -33,16 +33,16 @@ void textLayout()
   rect(titleX, titleY, titleWidth, titleHeight);
 }//End textLayout
 //
-void preDrawText(float heigthParameter2, color inkParameter2, int alignHorizontalParameter2, int alignVerticalParameter2)
+void preDrawText(float height, color ink, int alignHorizontal, int alignVertical)
 {
-  fill(inkParameter2); //Ink
-  textAlign(alignHorizontalParameter2, alignVerticalParameter2); //Align X&Y, see Processing.org / Reference
+  fill(ink);
+  textAlign(alignHorizontal, alignVertical); //Align X&Y, see Processing.org / Reference
   //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
-  textFont(titleFont, heigthParameter2); //50 //Change the number until it fits, largest font size
+  textFont(titleFont, height); //50 //Change the number until it fits, largest font size
 }//End preDrawText
-void textDraw(float heightParameter1, color inkParameter1, int alignHorizontalParameter1, int alignVerticalParameter1)
+void textDraw(float height, color ink, int alignHorizontal, int alignVertical)
 {
-  preDrawText(heightParameter1, inkParameter1, alignHorizontalParameter1, alignVerticalParameter1);
+  preDrawText(height, ink, alignHorizontal, alignVertical);
   text(title, titleX, titleY, titleWidth, titleHeight);
   textReset();
 }//End textDraw()
