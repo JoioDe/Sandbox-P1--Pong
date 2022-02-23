@@ -40,7 +40,7 @@ void preDrawText(float height, color ink, int alignHorizontal, int alignVertical
   //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
   textFont(font, height); //50 //Change the number until it fits, largest font size
 }//End preDrawText
-void textDraw(float height, color ink, int alignHorizontal, int alignVertical, PFont font, String string, float xRect, float yRect, float widthRect, float heightRect)
+void textDraw(float height, color ink, int alignHorizontal, int alignVertical, PFont font, String string, float xRect, float yRect, float widthRect, float heightRect, color resetColor)
 {
   preDrawText(height, ink, alignHorizontal, alignVertical, font);
   text(string, xRect, yRect, widthRect, heightRect);
@@ -49,5 +49,5 @@ void textDraw(float height, color ink, int alignHorizontal, int alignVertical, P
 //
 void textReset()
 {
-  fill(resetColor); //Ink to default
+  fill(); //Ink to default
 }//End textReset
