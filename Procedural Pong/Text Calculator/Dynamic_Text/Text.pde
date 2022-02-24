@@ -60,12 +60,16 @@ void textReset(color resetColor)
 // 
 float textCalculator(float size, float rectWidth, String string)
 {
+  // Starting at the HEIGHT is inefficient, what should we start at?
+  //hint: ratio of what
   textSize(size);
   while ( textWidth(string) > rectWidth )
   {
+    //Is there a simpler notation to use for this formula?
     size = size * 0.99; //Percent, size-- will do pixels (Jaskaran)
     textSize(size);
   }//End WHILE
+  // What is the biggerest number here for the white space at the top of the font
   size = size * 0.1; //Additional decrease for "Harrington" Font
   return size;
 }//End 
