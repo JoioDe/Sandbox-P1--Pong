@@ -48,7 +48,7 @@ void preDrawText(float height, color ink, int alignHorizontal, int alignVertical
 void textDraw(float height, color ink, int alignHorizontal, int alignVertical, PFont font, String string, float xRect, float yRect, float widthRect, float heightRect, color resetColor)
 {
   preDrawText(height, ink, alignHorizontal, alignVertical, font);
-  textSize(height); //height is wrong //Comparison of two Nums: textWidth(STRING) vs rectWidth, startingFontSize=height
+  textSize(textCalculator(height, widthRect, string)); //height is wrong //Comparison of two Nums: textWidth(STRING) vs rectWidth, startingFontSize=height
   text(string, xRect, yRect, widthRect, heightRect);
   textReset(resetColor);
 }//End textDraw()
@@ -57,3 +57,15 @@ void textReset(color resetColor)
 {
   fill(resetColor); //Ink to default //Now is local variable, not Global with same name
 }//End textReset
+// 
+float textCalculator(float size, float rectWidth, String string)
+{
+  textSize(size);
+  while ( textWidth(string) > rectWidth )
+  {
+    size = size * 0.99; //Percent, size-- will do pixels (Jaskaran)
+    textSize(size);
+  }//End WHILE
+  size = size * 0.1; //Additional decrease for "Harrington" Font
+  return size;
+}//End 
