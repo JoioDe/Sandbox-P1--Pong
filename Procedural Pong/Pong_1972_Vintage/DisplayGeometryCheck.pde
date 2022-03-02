@@ -10,7 +10,6 @@ void displayGeometryCheck()
 
 String adjustScreen()
 {
-  noLoop(); 
-  exit();
+  noLoop(); //will need to reactive with loop() in draw()
   return "Bruh, rotate phun";
 }//End adjustScreen()

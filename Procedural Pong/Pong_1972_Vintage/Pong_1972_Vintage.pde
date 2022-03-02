@@ -13,8 +13,8 @@ float x1MiddleLine, y1MiddleLine, x2MiddleLine, y2MiddleLine;
 
 void setup() {
   //Geomtery Communication and Variables for GUI Ratios
-  size(700, 500); //Landscape-orientation, fullScreen(); //displayWidth, displayHeight
-  displayGeometryCheck;
+  size(500, 700); //Landscape-orientation, fullScreen(); //displayWidth, displayHeight
+  displayGeometryCheck();
   population(); //One purpose of developer-written functions
   textSetup();
   //
