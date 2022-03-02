@@ -1,11 +1,17 @@
 //Least Amount of Code, in Static Mode executes landscape
 //fullScreen();
+println("First, Display Width:", displayWidth, "\t\tDisplay height:", displayHeight);
 int widthRatio = displayWidth;
 int heightRatio = displayHeight;
-size(500, 700);
- widthRatio = width;
- heightRatio = height;
-println("Display Width:", widthRatio, "\t\tDisplay height:", heightRatio);
+size(500, 800); //Note: window is larger than Display (for lesson, adjust if necessary)
+println("Second, Display Width:", width, "\t\tDisplay height:", height);
+widthRatio = width;
+heightRatio = height;
+//Can the app even run on the display, force the correct width and height if needed
+if ( widthRatio > displayWidth ) widthRatio = displayWidth; //force displayGeometry
+if ( heightRatio > displayHeight ) heightRatio = displayHeight; //force displayGeometry
+//
+println("Third, Display Width:", widthRatio, "\t\tDisplay height:", heightRatio);
 /*
 if ( widthRatio>heightRatio ) println("\nThis is landscape");
  if ( widthRatio<heightRatio ) println("\nThis is portrait, please rotate");
