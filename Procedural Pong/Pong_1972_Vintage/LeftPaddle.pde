@@ -6,8 +6,8 @@ void leftPaddleDraw() {
   leftPaddleStart(); //Might have to move outside draw()
   //
   if ( screenSaver==true ) { //Screen Saver Mod
-    yLeftPaddle = yBall; //try to use a more developed formula
-    yRightPaddle = yBall; //poor coding Best Practice
+    yLeftPaddle = yBall-heightPaddle*1/2; //try to use a more developed formula/
+    yRightPaddle = yBall-heightPaddle*1/2; //poor coding Best Practice
   }//End Screen Saver Mode
   //
   if ( yLeftPaddle <= height*0) yLeftPaddle = height*0;

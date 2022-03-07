@@ -6,7 +6,7 @@ void rightPaddleDraw() {
   rightPaddleStart();
   //
   if ( singlePlayer == true ) { //Single Player Mode
-    yRightPaddle = yBall; //try to use a more developed formula
+    yRightPaddle = yBall-heightPaddle*1/2; //try to use a more developed formula
   }//End Single Player  //
   if ( yRightPaddle < height*0) yRightPaddle = height*0;
   if ( yRightPaddle+heightPaddle > height) yRightPaddle = height-heightPaddle; //if yRightPaddle=height, hidden bug
