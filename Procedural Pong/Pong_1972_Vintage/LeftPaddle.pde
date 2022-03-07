@@ -1,9 +1,14 @@
 //Global Variable
 int leftPaddleSpeed = 0;
-Boolean leftPaddleUP=false, leftPaddleDOWN=false;
+Boolean leftPaddleUP=false, leftPaddleDOWN=false, screenSaver=false;
 
 void leftPaddleDraw() {
   leftPaddleStart(); //Might have to move outside draw()
+  //
+  if ( screenSaver==true ) { //Screen Saver Mod
+    yLeftPaddle = yBall; //try to use a more developed formula
+    yRightPaddle = yBall; //poor coding Best Practice
+  }//End Screen Saver Mode
   //
   if ( yLeftPaddle <= height*0) yLeftPaddle = height*0;
   if ( yLeftPaddle+heightPaddle >= height) yLeftPaddle = height-heightPaddle; // if yLeftPaddle=height, hidden bug
@@ -18,9 +23,9 @@ void leftPaddleKeyPressed() {
   //Left Paddle Speed, before Game Plays
   if ( leftPaddleSpeed==0 ) {
     if (key=='F' || key=='F') {//For Screen Saver Mode
-      yLeftPaddle = yBall; //try to use a more developed formula
-      yRightPaddle = yBall; //poor coding Best Practice
+      screenSaver = true;
       leftPaddleSpeed = 1; //Bug Exists: this is the gameOn() boolean
+      rightPaddleSpeed = 1; //Bug Exists: this is the gameOn() boolean
     }
     if ( key=='N' || key=='n' ) leftPaddleSpeed = 1;
     if ( key=='R' || key=='r' ) leftPaddleSpeed = 3;
