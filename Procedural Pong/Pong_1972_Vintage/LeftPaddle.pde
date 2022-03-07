@@ -19,6 +19,7 @@ void leftPaddleKeyPressed() {
   if ( leftPaddleSpeed==0 ) {
     if (key=='F' || key=='F') {//For Screen Saver Mode
       yLeftPaddle = yBall; //try to use a more developed formula
+      yRightPaddle = yBall; //poor coding Best Practice
       leftPaddleSpeed = 1; //Bug Exists: this is the gameOn() boolean
     }
     if ( key=='N' || key=='n' ) leftPaddleSpeed = 1;
