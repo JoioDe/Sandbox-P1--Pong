@@ -17,6 +17,10 @@ void leftPaddleDraw() {
 void leftPaddleKeyPressed() {
   //Left Paddle Speed, before Game Plays
   if ( leftPaddleSpeed==0 ) {
+    if (key=='F' || key=='F') {//For Screen Saver Mode
+      yLeftPaddle = yBall; //try to use a more developed formula
+      leftPaddleSpeed = 1; //Bug Exists: this is the gameOn() boolean
+    }
     if ( key=='N' || key=='n' ) leftPaddleSpeed = 1;
     if ( key=='R' || key=='r' ) leftPaddleSpeed = 3;
     if ( key=='G' || key=='g' ) leftPaddleSpeed = 10;

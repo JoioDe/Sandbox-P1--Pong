@@ -14,17 +14,19 @@ Boolean geometryCheck=false;
 
 void setup() {
   //Geomtery Communication and Variables for GUI Ratios
-  size(500, 1000); //Landscape-orientation, fullScreen(); //displayWidth, displayHeight
+  size(700, 500); //Landscape-orientation, fullScreen(); //displayWidth, displayHeight
   population(); //One purpose of developer-written functions
   textSetup();
   //
 }//End setup
 
 void draw() {
-  if (geometryCheck == false) displayGeometryCheck();
+  if ( geometryCheck == false ) displayGeometryCheck();
   if ( leftPaddleSpeed>0 && rightPaddleSpeed>0) {
     gameOn();
   } else {
+    println("For single player: press f");
+    println("For screen saver: press j");
     println("For Left Paddle Speed, Press n (NOOB), r (regular), g (god-mode)");
     println("For Right Paddle Speed, Press m (NOOB), t (regular), h (god-mode)");
   }

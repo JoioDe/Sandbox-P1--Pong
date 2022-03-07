@@ -21,4 +21,5 @@ String adjustScreen()
 {
   noLoop(); //will need to reactive with loop() in draw()
   return "Bruh, rotate phun";
+  // Built in bug, do not use this code in deployment, issue is weGo() & noLoop() algorithm
 }//End adjustScreen()

@@ -16,6 +16,10 @@ void rightPaddleDraw() {
 void rightPaddleKeyPressed() {
   //Left Paddle Speed, before Game Plays
   if ( rightPaddleSpeed==0 ) {
+    if ( key=='J' || key=='j' ) { //For Single Player Mode
+      yRightPaddle = yBall; //try to use a more developed formula
+      rightPaddleSpeed = 1; //Bug Exists: this is the gameOn() boolean
+    }
     if ( key=='M' || key=='m' ) rightPaddleSpeed = 1;
     if ( key=='T' || key=='t' ) rightPaddleSpeed = 3;
     if ( key=='H' || key=='h' ) rightPaddleSpeed = 10;
