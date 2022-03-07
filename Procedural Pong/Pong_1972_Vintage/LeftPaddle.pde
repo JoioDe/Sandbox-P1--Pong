@@ -22,7 +22,7 @@ void leftPaddleDraw() {
 void leftPaddleKeyPressed() {
   //Left Paddle Speed, before Game Plays
   if ( leftPaddleSpeed==0 ) {
-    if (key=='F' || key=='F') {//For Screen Saver Mode
+    if (key=='F' || key=='f') {//For Screen Saver Mode
       screenSaver = true;
       leftPaddleSpeed = 1; //Bug Exists: this is the gameOn() boolean
       rightPaddleSpeed = 1; //Bug Exists: this is the gameOn() boolean
