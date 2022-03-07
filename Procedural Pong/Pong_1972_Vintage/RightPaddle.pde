@@ -1,10 +1,13 @@
 //Global Variables
 int rightPaddleSpeed = 0;
-Boolean rightPaddleUP=false, rightPaddleDOWN=false;
+Boolean rightPaddleUP=false, rightPaddleDOWN=false, singlePlayer=false;
 
 void rightPaddleDraw() {
   rightPaddleStart();
   //
+  if ( singlePlayer == true ) { //Single Player Mode
+    yRightPaddle = yBall; //try to use a more developed formula
+  }//End Single Player  //
   if ( yRightPaddle < height*0) yRightPaddle = height*0;
   if ( yRightPaddle+heightPaddle > height) yRightPaddle = height-heightPaddle; //if yRightPaddle=height, hidden bug
   // 
@@ -17,7 +20,7 @@ void rightPaddleKeyPressed() {
   //Left Paddle Speed, before Game Plays
   if ( rightPaddleSpeed==0 ) {
     if ( key=='J' || key=='j' ) { //For Single Player Mode
-      yRightPaddle = yBall; //try to use a more developed formula
+      singlePlayer = true;
       rightPaddleSpeed = 1; //Bug Exists: this is the gameOn() boolean
     }
     if ( key=='M' || key=='m' ) rightPaddleSpeed = 1;
