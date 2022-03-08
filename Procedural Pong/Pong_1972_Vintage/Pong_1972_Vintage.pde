@@ -10,7 +10,7 @@ float xLeftScore, yLeftScore, xRightScore, yRightScore, widthScore, heightScore;
 float x1LeftNet, y1LeftNet, x2LeftNet, y2LeftNet;
 float x1RightNet, y1RightNet, x2RightNet, y2RightNet;
 float x1MiddleLine, y1MiddleLine, x2MiddleLine, y2MiddleLine;
-Boolean geometryCheck=false;
+Boolean geometryCheck=false, restart=false;
 
 void setup() {
   //Geomtery Communication and Variables for GUI Ratios
@@ -22,19 +22,23 @@ void setup() {
 
 void draw() {
   if ( geometryCheck == false ) displayGeometryCheck();
-  if ( leftPaddleSpeed>0 && rightPaddleSpeed>0) {
-    gameOn();
+  //
+  if ( leftPaddleSpeed>0 && rightPaddleSpeed>0 ) {
+    //Notice: nested IF for decisions
+    if ( rightGoal==true || leftGoal==true ) { //Reset after goal scored
+      afterGoalScored();
+    } else { //No Goal is scored
+      if (restart==false) gameOn();
+    } 
   } else {
-    println("For single player: press j (& remember the left paddle config)"); //Remember to 
-    println("For screen saver: press f");
-    println("For Left Paddle Speed, Press n (NOOB), r (regular), g (god-mode)");
-    println("For Right Paddle Speed, Press m (NOOB), t (regular), h (god-mode)");
+    startingInstructions();
   }
 }//End draw
 
 void keyPressed() { //Listener
   rightPaddleKeyPressed();
   leftPaddleKeyPressed();
+  if ( key=='P' || key=='p') restart=false;
 }//End keyPressed
 
 void mousePressed() {
