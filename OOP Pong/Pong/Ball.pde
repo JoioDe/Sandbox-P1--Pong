@@ -1,6 +1,7 @@
 class Ball
 {
-  //An object is ...
-  float x, y, diameter, colour;
+  //Global Variables
+  float x, y, diameter;
+  color colour;
   //
 }//End Ball

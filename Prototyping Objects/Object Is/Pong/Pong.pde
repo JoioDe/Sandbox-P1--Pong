@@ -7,14 +7,6 @@ void setup()
   //
   //An Object Is ... See the class
   Ball myBall = new Ball(); //Line can be anywhere
-  //A COnstructor Is...
-  myBall.x = width*1/10;
-  myBall.y = height*1/3;
-  myBall.diameter = width*1/25;
-  myBall.colour = color(31, 255, 3); //Hexidecimal: #1FFF03, Night Mode Friendly
-  //
-  fill(myBall.colour);
-  ellipse(myBall.x, myBall.y, myBall.diameter, myBall.diameter);
   //
   println("Exciting ... not exciting."); //Ball Object immediately deleted, local variable
   exit();
