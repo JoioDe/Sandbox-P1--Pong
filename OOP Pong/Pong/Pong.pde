@@ -4,7 +4,10 @@ void setup()
 {
   size(700, 500); //fullScreen(); displayWidth, displayHeight
   //ScreenSizeChecker() for Landscape, Portrait, square views (updated automatically for screen rotate)
-  //An Object Is...
+  //
+  //An Object Is ... See the class
+  
+  //
   println("Exciting ... not exciting."); //Ball Object immediately deleted, local variable
   exit();
 }//End setup()
