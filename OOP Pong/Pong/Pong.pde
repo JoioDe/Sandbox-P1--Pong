@@ -7,7 +7,7 @@ void setup()
   //
   //An Object Is ... See the class
   Ball myBall = new Ball(); //Line can be anywhere
-  //A COnstructor Is...
+  //A Constructor Is...
   myBall.x = width*1/10;
   myBall.y = height*1/3;
   myBall.diameter = width*1/25;
@@ -17,7 +17,7 @@ void setup()
   ellipse(myBall.x, myBall.y, myBall.diameter, myBall.diameter);
   //
   println("Exciting ... not exciting."); //Ball Object immediately deleted, local variable
-  exit();
+  //exit(); //Exit Button, TBA
 }//End setup()
 //Object is garbage collected here
 //
