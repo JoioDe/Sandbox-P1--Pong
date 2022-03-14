@@ -7,10 +7,8 @@ void setup()
   //
   //An Object Is ... See the class
   Ball myBall = new Ball(); //Line can be anywhere
-  Ball yourBall = new Ball();
   //
   myBall.draw();
-  yourBall.draw(); //Notice Bug
   //
   println("Exciting ... not exciting."); //Ball Object immediately deleted, local variable
   //exit(); //Exit Button, TBA
