@@ -4,11 +4,13 @@ class Ball
   float x, y, diameter;
   color colour;
   //
-  Ball (float xParameter, float yParameter, float diameterParameter, color colourParameter) { //Constructor Is ... hard coded, single visual object
+  Ball (float xParameter, float yParameter, float diameterParameter, color colourParameter, int xSpeedParameter, int ySpeedParameter) { //Constructor Is ... hard coded, single visual object
     x = xParameter;
     y = yParameter;
     diameter = diameterParameter;
     colour = colourParameter; //Hexidecimal: #1FFF03, Night Mode Friendly
+    xSpeed = ;
+    ySpeed = ;
   }//End Constructor
   //
   void draw() {
@@ -16,4 +18,8 @@ class Ball
     ellipse(x, y, diameter, diameter);
   }//End draw
   //
+  void move() {
+    x += xSpeed;
+    y += ySpeed;
+  }//End move
 }//End Ball
