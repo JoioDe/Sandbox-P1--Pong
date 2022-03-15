@@ -1,6 +1,5 @@
 // Global Variables & Objects
-Ball myBall;
-Ball yourBall; 
+Ball myBall, yourBall; 
 //
 void setup()
 {

@@ -19,10 +19,16 @@ class Ball
     ellipse(x, y, diameter, diameter);
     //
     move();
+    bounce();
   }//End draw
   //
   void move() {
     x += xSpeed;
     y += ySpeed;
   }//End move
+  //
+  void bounce() {//not the bounce off the paddles
+    if ( x-diameter*1/2 < width*0 || x+diameter*1/2 > width ) xSpeed *= -1; //Net Bounce, will change
+    if ( y-diameter*1/2 < height*0 || y+diameter*1/2 > height ) ySpeed *= -1; //Top and Bottom
+  }//End bounce
 }//End Ball
