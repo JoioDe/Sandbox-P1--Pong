@@ -17,6 +17,8 @@ class Ball
   void draw() {
     fill(colour);
     ellipse(x, y, diameter, diameter);
+    //
+    move();
   }//End draw
   //
   void move() {
