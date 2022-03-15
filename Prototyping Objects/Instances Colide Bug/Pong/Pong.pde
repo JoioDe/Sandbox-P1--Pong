@@ -22,16 +22,15 @@ void draw()
   //
   // Ball Objects bounce off each other ... only play to access either variable
   //For more than one ball, need to compare all objects even if scored
-  int collisionDirection = myBall.xSpeed*yourBall.xSpeed;
   float collisionProximityX = abs (myBall.x - yourBall.x);
   float collisionProximityY = abs (myBall.y - yourBall.y);
-  println (collisionDirection, collisionProximityX, collisionProximityY);
+  println (collisionProximityX, collisionProximityY);
   //
-  if (collisionProximityX <= myBall.diameter ) {
+  if (collisionProximityX <= myBall.diameter ) { //Includes negative values here
     myBall.xSpeed *= -1;
     yourBall.xSpeed *= -1;
   }
-  if (collisionProximityY <= myBall.diameter ) {
+  if (collisionProximityY <= myBall.diameter ) { //Includes negative values here
     myBall.ySpeed *= -1;
     yourBall.ySpeed *= -1;
     /*
