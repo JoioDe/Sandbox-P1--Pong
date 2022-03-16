@@ -1,3 +1,8 @@
+/*To Do List
+ Ball Collisions
+ Psuedocode other class
+ */
+
 // Global Variables & Objects
 Ball myBall, yourBall; 
 //
@@ -19,6 +24,8 @@ void draw()
 {
   myBall.draw();
   yourBall.draw(); //Notice Bug
+  //
+  ballCollisions(); //Student Problem
 }//End draw()
 //
 void keyPressed() {
