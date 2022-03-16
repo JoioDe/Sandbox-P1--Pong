@@ -1,6 +1,7 @@
 /*To Do List
  Ball Collisions
- Psuedocode other class
+ Pseudocode other class
+ Configuring the Game - setting initial variables (i.e. paddle speed)
  */
 
 // Global Variables & Objects
@@ -29,6 +30,8 @@ void draw()
 }//End draw()
 //
 void keyPressed() {
+  //Press W-S-D for Left Paddle
+  //Press UP-DOWN-LEFT Arroes for Right Paddle
 }//End keyPressed()
 //
 void mousePressed() {
