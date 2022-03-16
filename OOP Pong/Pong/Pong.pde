@@ -26,6 +26,8 @@ void draw()
   myBall.draw();
   yourBall.draw(); //Notice Bug
   //
+  //myBall.detectCollision(Paddle.x); // Example: Classes Talking
+  //
   ballCollisions(); //Student Problem
 }//End draw()
 //

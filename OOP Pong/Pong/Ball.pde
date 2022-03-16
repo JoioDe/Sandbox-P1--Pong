@@ -20,6 +20,7 @@ class Ball
     //
     move();
     bounce();
+    bouncePaddle();
   }//End draw
   //
   void move() {
@@ -31,4 +32,7 @@ class Ball
     if ( x-diameter*1/2 < width*0 || x+diameter*1/2 > width ) xSpeed *= -1; //Net Bounce, will change
     if ( y-diameter*1/2 < height*0 || y+diameter*1/2 > height ) ySpeed *= -1; //Top and Bottom
   }//End bounce
+  //
+  void bouncePaddle() {}//End bouncePaddle
+  //
 }//End Ball
