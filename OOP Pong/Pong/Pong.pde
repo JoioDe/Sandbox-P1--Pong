@@ -2,6 +2,7 @@
  Ball Collisions
  Pseudocode other class
  Configuring the Game - setting initial variables (i.e. paddle speed)
+ Screen Saver Pong or 1-Player Pong: paddle.y=ball.y
  */
 
 // Global Variables & Objects
