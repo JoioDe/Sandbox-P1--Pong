@@ -4,9 +4,9 @@
  Change the colour of the ball at a specific level/score
  Introduce multiple balls at a specific level/score
  Unlimited mode, where the ball speeds up over time
-   - Note: continuous collision, so the ball can't zip through the paddle
+ - Note: continuous collision, so the ball can't zip through the paddle
  Ball become invisible for a split second-guessing
-   - invisible halfway across the screen ... guess the path
+ - invisible halfway across the screen ... guess the path
  */
 private class Ball
 {
@@ -16,22 +16,20 @@ private class Ball
   private int xSpeed, ySpeed;
   private Boolean nightMode=false;
   //
-  // width*1/10, height*1/3, width*1/25, color(31, 255, 3), width/width, height/height
-  // width*9/10, height*1/3, width*1/25, , width/width, height/height
   private Ball (float widthParameter, float heightParameter) { //Constructor Is ... hard coded, single visual object
-    x = widthParameter*1/2; //Start Ball Location whereever
-    y = heightParameter*1/2;
+    this.x = widthParameter*1/2; //Start Ball Location whereever
+    this.y = heightParameter*1/2;
     xStart = x; // Location Specifically at Game Start, middle of field
     yStart = y;
-    diameter = widthParameter*1/70;
+    diameter = widthParameter*1/70; //same on all of them
     if ( nightMode == false ) colour = color( random( 0, 255), random(255), random(255) );
     if ( nightMode == true ) colour = color( random( 0, 255), random(255), 0 ); //Blue=0 //Hexidecimal: #1FFF03, Night Mode Friendly
-    xSpeed = xSpeedParameter;
-    ySpeed = ySpeedParameter;
+    this.xSpeed = int ( random (widthParameter/widthParameter, widthParameter/widthParameter*5) );
+    this.ySpeed = int ( random (heightParameter/heightParameter, heightParameter/heightParameter*5) );
     xDirection = 0;
-    while ( xDirection == 0) { xDirection = int ( random (-2, 2) ); }
+    while ( xDirection == 0) { this.xDirection = int ( random (-2, 2) ); } //one line WHILE
     yDirection = 0;
-    while ( yDirection == 0) { yDirection = int ( random (-2, 2) ); }
+    while ( yDirection == 0) { this.yDirection = int ( random (-2, 2) ); } //one line WHILE
   }//End Constructor
   //
   private void draw() {
