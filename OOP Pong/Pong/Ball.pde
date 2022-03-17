@@ -8,42 +8,49 @@
  Ball become invisible for a split second-guessing
    - invisible halfway across the screen ... guess the path
  */
-class Ball
+private class Ball
 {
   //Global Variables
-  float x, y, diameter;
-  color colour;
-  int xSpeed, ySpeed;
+  private float x, y, diameter, xStart, yStart, xDirection, yDirection;
+  private color colour, colourReset=#FFFFFF;
+  private int xSpeed, ySpeed;
   //
-  Ball (float xParameter, float yParameter, float diameterParameter, color colourParameter, int xSpeedParameter, int ySpeedParameter) { //Constructor Is ... hard coded, single visual object
-    x = xParameter;
+  private Ball (float xParameter, float yParameter, float diameterParameter, color colourParameter, int xSpeedParameter, int ySpeedParameter) { //Constructor Is ... hard coded, single visual object
+    x = xParameter; //Start Ball Location whereever
     y = yParameter;
+    xStart = x; // Location Specifically at Game Start, middle of field
+    yStart = y;
     diameter = diameterParameter;
     colour = colourParameter; //Hexidecimal: #1FFF03, Night Mode Friendly
     xSpeed = xSpeedParameter;
     ySpeed = ySpeedParameter;
+    xDirection = 0;
+    while ( xDirection == 0) { xDirection = int ( random (-2, 2) ); }
+    yDirection = 0;
+    while ( yDirection == 0) { yDirection = int ( random (-2, 2) ); }
   }//End Constructor
   //
-  void draw() {
+  private void draw() {
     fill(colour);
     ellipse(x, y, diameter, diameter);
+    fill(colourReset);
     //
     move();
     bounce();
     bouncePaddle();
   }//End draw
   //
-  void move() {
+  private void move() {
     x += xSpeed;
     y += ySpeed;
   }//End move
   //
-  void bounce() {//not the bounce off the paddles
+  private void bounce() {//not the bounce off the paddles
     if ( x-diameter*1/2 < width*0 || x+diameter*1/2 > width ) xSpeed *= -1; //Net Bounce, will change
     if ( y-diameter*1/2 < height*0 || y+diameter*1/2 > height ) ySpeed *= -1; //Top and Bottom
   }//End bounce
   //
-  void bouncePaddle() {
+  private void bouncePaddle() {
   }//End bouncePaddle
   //
 }//End Ball
