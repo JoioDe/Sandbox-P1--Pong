@@ -14,14 +14,18 @@ private class Ball
   private float x, y, diameter, xStart, yStart, xDirection, yDirection;
   private color colour, colourReset=#FFFFFF;
   private int xSpeed, ySpeed;
+  private Boolean nightMode=false;
   //
-  private Ball (float xParameter, float yParameter, float diameterParameter, color colourParameter, int xSpeedParameter, int ySpeedParameter) { //Constructor Is ... hard coded, single visual object
-    x = xParameter; //Start Ball Location whereever
-    y = yParameter;
+  // width*1/10, height*1/3, width*1/25, color(31, 255, 3), width/width, height/height
+  // width*9/10, height*1/3, width*1/25, , width/width, height/height
+  private Ball (float widthParameter, float heightParameter) { //Constructor Is ... hard coded, single visual object
+    x = widthParameter*1/2; //Start Ball Location whereever
+    y = heightParameter*1/2;
     xStart = x; // Location Specifically at Game Start, middle of field
     yStart = y;
-    diameter = diameterParameter;
-    colour = colourParameter; //Hexidecimal: #1FFF03, Night Mode Friendly
+    diameter = widthParameter*1/70;
+    if ( nightMode == false ) colour = color( random( 0, 255), random(255), random(255) );
+    if ( nightMode == true ) colour = color( random( 0, 255), random(255), 0 ); //Blue=0 //Hexidecimal: #1FFF03, Night Mode Friendly
     xSpeed = xSpeedParameter;
     ySpeed = ySpeedParameter;
     xDirection = 0;
