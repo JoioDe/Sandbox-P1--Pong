@@ -19,15 +19,17 @@ void setup()
   ball[ballCounter] = new Ball( width, height ); //Start the first ball, need ballCounter
   //Instead of myBall or yourBall, ball[0]
   //
-  println("Exciting ... not exciting."); //Ball Object immediately deleted, local variable
+  ballCounter++; // ballCounter += 1
   //exit(); //Exit Button, TBA
 }//End setup()
 //Object is garbage collected here
 //
 void draw()
 {
-  myBall.draw();
-  yourBall.draw(); //Notice Bug
+  background(255); //Gray Scale, hardcoded for prototyping
+  for ( int i=0; i<ballCounter; i++ ) { //Controls each ball of all 10 (ballCount)
+    ball[i].draw();
+  }//End ball.draw
   //
   //myBall.detectCollision(Paddle.x); // Example: Classes Talking
   //
@@ -42,5 +44,15 @@ void keyPressed() {
 }//End keyPressed()
 //
 void mousePressed() {
+  //Easter Egg Example: mouse press to create another ball instantiation
+  if ( ballCounter >= ball.length) {
+    exit(); // Eventually will become an EXIT Button
+  } else {
+    ballCounter++; // ballCounter += 1
+  }
+  for ( int i=ballCounter-1; i<ballCounter; i++ ) { // Constructor for other ball objects could be a button
+    ball[ballCounter] = new Ball( width, height );
+    ball[i].draw(); //Completes Constructor, teaching opportunity
+  }//End Constructor
 }//End mousePressed()
 //

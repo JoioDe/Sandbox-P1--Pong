@@ -26,8 +26,8 @@ private class Ball
     xStart = x; // Location Specifically at Game Start, middle of field
     yStart = y;
     diameter = widthParameter*1/70; //same on all of them
-    if ( nightMode == false ) colour = color( random( 0, 255), random(255), random(255) );
-    if ( nightMode == true ) colour = color( random( 0, 255), random(255), 0 ); //Blue=0 //Hexidecimal: #1FFF03, Night Mode Friendly
+    if ( nightMode == false ) this.colour = color( random( 0, 255), random(255), random(255) );
+    if ( nightMode == true ) this.colour = color( random( 0, 255), random(255), 0 ); //Blue=0 //Hexidecimal: #1FFF03, Night Mode Friendly
     this.xSpeed = int ( random (widthParameter/widthParameter, widthParameter/widthParameter*5) );
     this.ySpeed = int ( random (heightParameter/heightParameter, heightParameter/heightParameter*5) );
     xDirection = 0;
