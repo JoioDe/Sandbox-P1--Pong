@@ -33,6 +33,8 @@ void draw()
 }//End draw()
 //
 void keyPressed() {
+  //User defined NIGHTMODE, see Ball Class, will be referenced to other classes too
+  //NIGHTMODE might be better as a STATIC Variable
   //Press W-S-D for Left Paddle
   //Press UP-DOWN-LEFT Arroes for Right Paddle
 }//End keyPressed()

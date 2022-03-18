@@ -27,9 +27,13 @@ private class Ball
     this.xSpeed = int ( random (widthParameter/widthParameter, widthParameter/widthParameter*5) );
     this.ySpeed = int ( random (heightParameter/heightParameter, heightParameter/heightParameter*5) );
     xDirection = 0;
-    while ( xDirection == 0) { this.xDirection = int ( random (-2, 2) ); } //one line WHILE
+    while ( xDirection == 0) { 
+      this.xDirection = int ( random (-2, 2) );
+    } //one line WHILE
     yDirection = 0;
-    while ( yDirection == 0) { this.yDirection = int ( random (-2, 2) ); } //one line WHILE
+    while ( yDirection == 0) { 
+      this.yDirection = int ( random (-2, 2) );
+    } //one line WHILE
   }//End Constructor
   //
   private void draw() {
@@ -54,5 +58,10 @@ private class Ball
   //
   private void bouncePaddle() {
   }//End bouncePaddle
+  //
+  private void ballScore() {
+    //Introduction to EMPTY IF
+    //Ball knows where NET is
+  }//End ballScore
   //
 }//End Ball
