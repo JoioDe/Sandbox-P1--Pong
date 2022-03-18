@@ -6,7 +6,7 @@
  */
 
 // Global Variables & Objects
-Ball myBall, yourBall; 
+Ball[] ball; //Not just an array, but an array list: includes code and variables
 //
 void setup()
 {
