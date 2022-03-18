@@ -6,7 +6,9 @@
  */
 
 // Global Variables & Objects
-Ball[] ball; //Not just an array, but an array list: includes code and variables
+int ballCount=10; //Hack for STATIC Variable, see Ball Class
+Ball[] ball = new Ball[ballCount]; //Not just an array, but an array list: includes code and variables
+int ballCounter = ball.length - ball.length; //How to get "zero" but using another value
 //
 void setup()
 {
@@ -14,8 +16,8 @@ void setup()
   //ScreenSizeChecker() for Landscape, Portrait, square views (updated automatically for screen rotate)
   //
   //Constructor
-  myBall = new Ball( width, height );
-  yourBall = new Ball( width, height );
+  ball[ballCounter] = new Ball( width, height ); //Start the first ball, need ballCounter
+  //Instead of myBall or yourBall, ball[0]
   //
   println("Exciting ... not exciting."); //Ball Object immediately deleted, local variable
   //exit(); //Exit Button, TBA

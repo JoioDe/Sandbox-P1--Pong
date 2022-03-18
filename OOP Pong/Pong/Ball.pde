@@ -16,6 +16,10 @@ private class Ball
   private int xSpeed, ySpeed;
   private Boolean nightMode=false;
   //
+  // int ballCount = 10; //Knows how many instances of BALL there are
+  // Not just myBall and yourBall
+  // Example of a Static Variable: do not need an object, true sense of Final Global Variable 
+  //
   private Ball (float widthParameter, float heightParameter) { //Constructor Is ... hard coded, single visual object
     this.x = widthParameter*1/2; //Start Ball Location whereever
     this.y = heightParameter*1/2;
