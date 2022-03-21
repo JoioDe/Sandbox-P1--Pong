@@ -14,7 +14,7 @@ private class Ball
   private float x, y, diameter, xStart, yStart, xDirection, yDirection;
   private color colour, colourReset=#FFFFFF;
   private int xSpeed, ySpeed;
-  private Boolean nightMode=false;
+  private Boolean nightMode=false, ballXGoal=false;
   //
   // int ballCount = 10; //Knows how many instances of BALL there are
   // Not just myBall and yourBall
@@ -64,9 +64,16 @@ private class Ball
   //
   private void ballScore() {
     //Ball knows where NET is
-    if () { //Net Detection
-      if () {} //Goal for left player
-      if () {} //Goal for right player
+    if ( x < (width*0)+diameter || x > width-diameter  ) { //Net Detection
+      ballXGoal = true; //Might be bug depending on Goal Algorithms
+      if ( x < (width*0)+diameter ) {//Goal for left player
+        x = (width*0)+(diameter/4); // Ackward ball placement
+        y = y;
+      } 
+      if ( x > width-diameter ) { //Goal for right player
+        x = width-diameter/4; // Ackward ball placement
+        y = y;
+      } 
     } //End Net Detection
     //
     if ( ballXGoal == true ) {

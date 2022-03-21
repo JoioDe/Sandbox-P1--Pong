@@ -7,8 +7,11 @@
 
 class Paddle {
   //Global Variables
+  private color colour;
+  private int paddleXLeft, paddleXRight, paddleYLeft, paddleYRight, paddleWidth, paddleHeight; 
   //
-  Paddle () { //General Population
+  Paddle (float widthParameter, float heightParameter) { //General Population
+  colour = ; //random, same for both
   //Game start, paddles in the middle
   }//End Contructor
   //
