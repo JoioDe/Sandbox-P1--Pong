@@ -15,6 +15,14 @@ class Paddle {
   if ( nightMode == false ) this.colour = color ( int(random(100, 255)), int(random(50, 255)), int(random(175, 255)) ) ; //random, different
   if ( nightMode == true ) this.colour = color ( int(random(100, 255)), int(random(50, 255)), 0 ) ; //random, different
   //Game start, paddles in the middle
+  paddleWidth = int(widthParameter*1/80); //no "this" thus no change ever
+  paddleXLeft = int(widthParameter*1/40);
+  paddleXRight = int(widthParameter*39/40) - paddleWidth;
+  paddleHeight = int(heightParameter*1/4);
+  this.paddleYLeft = int(heightParameter*1/2) - paddleHeight*1/2;
+  this.paddleYRight = paddleYLeft;
+  //Variables to move the paddle
+  //Variables for paddle speed
   }//End Contructor
   //
   void draw() {
