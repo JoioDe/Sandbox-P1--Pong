@@ -7,7 +7,7 @@
 
 class Paddle {
   //Global Variables
-  private color colour;
+  private color colour, colourResetWhite=#000000;
   private int paddleXLeft, paddleXRight, paddleYLeft, paddleYRight, paddleWidth, paddleHeight;
   private Boolean nightMode=false;
   //
@@ -34,7 +34,7 @@ class Paddle {
     //Specific Colour - configuration?
     fill(colour);
     rect(paddleXLeft, paddleYLeft, paddleWidth, paddleHeight);
-    fill(colourReset); //white
+    fill(colourResetWhite);
     move();
   }//End leftPaddle
   //
@@ -42,7 +42,7 @@ class Paddle {
     //Specific Colour - configuration?
     fill(colour);
     rect(paddleXRight, paddleYRight, paddleWidth, paddleHeight);
-    fill(colourReset); //white
+    fill(colourResetWhite);
     move();
   }//End rigthPaddle
   //

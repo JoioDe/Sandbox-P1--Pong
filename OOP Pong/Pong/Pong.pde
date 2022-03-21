@@ -9,6 +9,7 @@
 int ballCount=10; //Hack for STATIC Variable, see Ball Class
 Ball[] ball = new Ball[ballCount]; //Not just an array, but an array list: includes code and variables
 int ballCounter = ball.length - ball.length; //How to get "zero" but using another value
+Paddle paddle;
 //
 void setup()
 {
@@ -17,6 +18,7 @@ void setup()
   //
   //Constructor
   ball[ballCounter] = new Ball( width, height ); //Start the first ball, need ballCounter
+  paddle = new Paddle( width, height );
   //Instead of myBall or yourBall, ball[0]
   //
   ballCounter++; // ballCounter += 1
@@ -27,6 +29,7 @@ void setup()
 void draw()
 {
   background(255); //Gray Scale, hardcoded for prototyping
+  paddle.draw();
   for ( int i=0; i<ballCounter; i++ ) { //Controls each ball of all 10 (ballCount)
     ball[i].draw();
   }//End ball.draw
