@@ -45,8 +45,7 @@ private class Ball
     ellipse(x, y, diameter, diameter);
     fill(colourReset);
     //
-    move();
-    bounce();
+    ballScore();
     bouncePaddle();
   }//End draw
   //
@@ -64,8 +63,18 @@ private class Ball
   }//End bouncePaddle
   //
   private void ballScore() {
-    //Introduction to EMPTY IF
     //Ball knows where NET is
+    if () { //Net Detection
+      if () {} //Goal for left player
+      if () {} //Goal for right player
+    } //End Net Detection
+    //
+    if ( ballXGoal == true ) {
+      //EMPTY IF
+    } else {
+      move();
+      bounce();
+    }
   }//End ballScore
   //
 }//End Ball
