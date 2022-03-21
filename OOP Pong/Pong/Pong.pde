@@ -51,7 +51,7 @@ void mousePressed() {
     ballCounter++; // ballCounter += 1
   }
   for ( int i=ballCounter-1; i<ballCounter; i++ ) { // Constructor for other ball objects could be a button
-    ball[ballCounter] = new Ball( width, height );
+    ball[i] = new Ball( width, height );
     ball[i].draw(); //Completes Constructor, teaching opportunity
   }//End Constructor
 }//End mousePressed()

@@ -20,7 +20,7 @@ private class Ball
   // Not just myBall and yourBall
   // Example of a Static Variable: do not need an object, true sense of Final Global Variable 
   //
-  private Ball (float widthParameter, float heightParameter) { //Constructor Is ... hard coded, single visual object
+  public Ball (float widthParameter, float heightParameter) { //Constructor Is ... hard coded, single visual object
     this.x = widthParameter*1/2; //Start Ball Location whereever
     this.y = heightParameter*1/2;
     xStart = x; // Location Specifically at Game Start, middle of field
@@ -40,7 +40,7 @@ private class Ball
     } //one line WHILE
   }//End Constructor
   //
-  private void draw() {
+  public void draw() {
     fill(colour);
     ellipse(x, y, diameter, diameter);
     fill(colourReset);
