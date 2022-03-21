@@ -8,10 +8,12 @@
 class Paddle {
   //Global Variables
   private color colour;
-  private int paddleXLeft, paddleXRight, paddleYLeft, paddleYRight, paddleWidth, paddleHeight; 
+  private int paddleXLeft, paddleXRight, paddleYLeft, paddleYRight, paddleWidth, paddleHeight;
+  private Boolean nightMode=false;
   //
   Paddle (float widthParameter, float heightParameter) { //General Population
-  colour = ; //random, same for both
+  if ( nightMode == false ) this.colour = color ( int(random(100, 255)), int(random(50, 255)), int(random(175, 255)) ) ; //random, different
+  if ( nightMode == true ) this.colour = color ( int(random(100, 255)), int(random(50, 255)), 0 ) ; //random, different
   //Game start, paddles in the middle
   }//End Contructor
   //
