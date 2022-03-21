@@ -32,11 +32,17 @@ class Paddle {
   //
   void leftPaddle() {
     //Specific Colour - configuration?
+    fill(colour);
+    rect(paddleXLeft, paddleYLeft, paddleWidth, paddleHeight);
+    fill(colourReset); //white
     move();
   }//End leftPaddle
   //
   void rightPaddle() {
     //Specific Colour - configuration?
+    fill(colour);
+    rect(paddleXRight, paddleYRight, paddleWidth, paddleHeight);
+    fill(colourReset); //white
     move();
   }//End rigthPaddle
   //
